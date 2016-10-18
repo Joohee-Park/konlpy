@@ -64,7 +64,7 @@ def init_jvm():
     #     '-ea', '-Xmx768m',
     #     'kr.lucypark.py4j.KonlpyGateway']);
 
-    print "Initializing JAVA frameworks..."
+    print("Initializing JAVA frameworks...")
     time.sleep(1)
     jvm_e = None
     for i in range(0, 10):
@@ -81,7 +81,7 @@ def init_jvm():
             raise jvm_e
         raise JvmError("Could not connect to JVM. unknown error");
 
-    print "JAVA frameworks initialized."
+    print("JAVA frameworks initialized.")
     atexit.register(shutdown_jvm);
 
 def get_jvm():
